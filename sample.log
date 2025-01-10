@@ -1,0 +1,63 @@
+[2025-01-10 18:19:55] script: proxmox_rsync.sh
+[2025-01-10 18:19:55] scriptdir: /root
+[2025-01-10 18:19:55] hostname: px-c06
+[2025-01-10 18:19:55] uname: Linux px-c06 6.8.12-5-pve #1 SMP PREEMPT_DYNAMIC PMX 6.8.12-5 (2024-12-03T10:26Z) x86_64 GNU/Linux
+[2025-01-10 18:19:55] whoami: root
+[2025-01-10 18:19:55] now: 2025-01-10 18:19:55
+[2025-01-10 18:19:55] rsync source: /zpool
+[2025-01-10 18:19:55] rsync destination: /mnt/pve/usb-external
+[2025-01-10 18:19:55] rsync command: rsync --recursive --group --owner --times --perms --links --delete --stats --human-readable /zpool /mnt/pve/usb-external/
+[2025-01-10 18:19:55] 
+[2025-01-10 18:19:55] Mounting "/mnt/pve/usb-external" via "systemctl start mnt-pve-usb\x2dexternal.mount" ..
+[2025-01-10 18:19:55] Mounted successfully.
+[2025-01-10 18:19:55] 
+[2025-01-10 18:19:55] ● mnt-pve-usb\x2dexternal.mount - Mount storage 'usb-external' under /mnt/pve
+[2025-01-10 18:19:55]      Loaded: loaded (/etc/systemd/system/mnt-pve-usb\x2dexternal.mount; disabled; preset: enabled)
+[2025-01-10 18:19:55]      Active: active (mounted) since Fri 2025-01-10 18:19:55 EST; 9ms ago
+[2025-01-10 18:19:55]       Where: /mnt/pve/usb-external
+[2025-01-10 18:19:55]        What: /dev/sdf1
+[2025-01-10 18:19:55]       Tasks: 0 (limit: 38121)
+[2025-01-10 18:19:55]      Memory: 7.5M
+[2025-01-10 18:19:55]         CPU: 85ms
+[2025-01-10 18:19:55]      CGroup: /system.slice/mnt-pve-usb\x2dexternal.mount
+[2025-01-10 18:19:55] 
+[2025-01-10 18:19:55] Jan 10 18:19:55 px-c06 systemd[1]: Mounting mnt-pve-usb\x2dexternal.mount - Mount storage 'usb-external' under /mnt/pve...
+[2025-01-10 18:19:55] Jan 10 18:19:55 px-c06 systemd[1]: Mounted mnt-pve-usb\x2dexternal.mount - Mount storage 'usb-external' under /mnt/pve.
+[2025-01-10 18:19:55] 
+[2025-01-10 18:19:55] 
+[2025-01-10 18:19:55] Rsyncing "/zpool" to "/mnt/pve/usb-external/" ..
+[2025-01-10 18:24:20] 
+[2025-01-10 18:24:20] Number of files: 203,070 (reg: 137,236, dir: 65,834)
+[2025-01-10 18:24:20] Number of created files: 0
+[2025-01-10 18:24:20] Number of deleted files: 0
+[2025-01-10 18:24:20] Number of regular files transferred: 0
+[2025-01-10 18:24:20] Total file size: 595.87G bytes
+[2025-01-10 18:24:20] Total transferred file size: 0 bytes
+[2025-01-10 18:24:20] Literal data: 0 bytes
+[2025-01-10 18:24:20] Matched data: 0 bytes
+[2025-01-10 18:24:20] File list size: 1.31M
+[2025-01-10 18:24:20] File list generation time: 0.001 seconds
+[2025-01-10 18:24:20] File list transfer time: 0.000 seconds
+[2025-01-10 18:24:20] Total bytes sent: 12.30M
+[2025-01-10 18:24:20] Total bytes received: 67.71K
+[2025-01-10 18:24:20] 
+[2025-01-10 18:24:20] sent 12.30M bytes  received 67.71K bytes  46.59K bytes/sec
+[2025-01-10 18:24:20] total size is 595.87G  speedup is 48,169.53
+[2025-01-10 18:24:20] Rsync completed successfully. (0)
+[2025-01-10 18:24:25] 
+[2025-01-10 18:24:25] 
+[2025-01-10 18:24:25] Unmounting "/mnt/pve/usb-external" via "systemctl stop mnt-pve-usb\x2dexternal.mount" ..
+[2025-01-10 18:24:26] Unmounted successfully.
+[2025-01-10 18:24:26] 
+[2025-01-10 18:24:26] ○ mnt-pve-usb\x2dexternal.mount - Mount storage 'usb-external' under /mnt/pve
+[2025-01-10 18:24:26]      Loaded: loaded (/etc/systemd/system/mnt-pve-usb\x2dexternal.mount; disabled; preset: enabled)
+[2025-01-10 18:24:26]      Active: inactive (dead)
+[2025-01-10 18:24:26]       Where: /mnt/pve/usb-external
+[2025-01-10 18:24:26]        What: /dev/disk/by-uuid/3dad6b61-e7cb-4cee-ba83-ef8bf4d950d1
+[2025-01-10 18:24:26] 
+[2025-01-10 18:24:26] Jan 10 18:24:25 px-c06 systemd[1]: Unmounting mnt-pve-usb\x2dexternal.mount - Mount storage 'usb-external' under /mnt/pve...
+[2025-01-10 18:24:26] Jan 10 18:24:26 px-c06 systemd[1]: mnt-pve-usb\x2dexternal.mount: Deactivated successfully.
+[2025-01-10 18:24:26] Jan 10 18:24:26 px-c06 systemd[1]: Unmounted mnt-pve-usb\x2dexternal.mount - Mount storage 'usb-external' under /mnt/pve.
+[2025-01-10 18:24:26] 
+[2025-01-10 18:24:26] Done. (0)
+

@@ -48,7 +48,7 @@ SCRIPTDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 # rsync options
 RS_SOURCE="/zpool"                                  ;# no trailing slash
-RS_DESTINATION="/mnt/pve/usb-external"              ;# no trailing slash
+RS_DESTINATION="/mnt/pve/usb_external"              ;# no trailing slash
 RS_OPTS="--recursive --group --owner --times --perms --links"
 RS_OPTS="${RS_OPTS} --delete"                       ;# delete from destination
 # RS_OPTS="${RS_OPTS} --dry-run"                    ;# simulate only
@@ -56,7 +56,7 @@ RS_OPTS="${RS_OPTS} --delete"                       ;# delete from destination
 RS_LOG="--stats --human-readable"
 
 # systemd unit for mount
-SYSD_UNIT="mnt-pve-usb\\x2dexternal.mount"
+SYSD_UNIT="mnt-pve-usb_external.mount"
 
 # track errors
 ERROR_STATUS=0

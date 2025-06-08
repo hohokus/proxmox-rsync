@@ -40,15 +40,13 @@ set -o pipefail ;# do not hide pipeline errors
 # systemctl exit status
 # https://www.freedesktop.org/software/systemd/man/latest/systemctl.html#Exit%20status
 #
-# 2025-01-07, hohokus@gmail.com
-#
 ########################################################################
 
 SCRIPTDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 # rsync options
-RS_SOURCE="/zpool"                                  ;# no trailing slash
-RS_DESTINATION="/mnt/pve/usb_external"              ;# no trailing slash
+RS_SOURCE="/zpool"
+RS_DESTINATION="/mnt/pve/usb_external"
 RS_OPTS="--recursive --group --owner --times --perms --links"
 RS_OPTS="${RS_OPTS} --delete"                       ;# delete from destination
 # RS_OPTS="${RS_OPTS} --dry-run"                    ;# simulate only
